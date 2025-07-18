@@ -3,20 +3,31 @@ import Die from '../components/Die.jsx'
 
 function App() {
 
+  const [diceArray, setDiceArray] = React.useState(generateAllNewDice());
+
+  function generateAllNewDice(){
+    let diceValues = []
+
+    for (let index = 0; index < 10; index++) {
+      let randomDice = Math.floor(Math.random() * 6) + 1;
+      diceValues.push(randomDice);
+    }
+
+    return diceValues;
+  }
+
+  const diceComponents = diceArray.map((value) => {
+    return(
+        <Die value={value} />
+      )
+    })
+
+
   return (
     <>
       <main>
         <container className="dice-container">
-          <Die value={1}/>
-          <Die value={2}/>
-          <Die value={3}/>
-          <Die value={4}/>
-          <Die value={5}/>
-          <Die value={6}/>
-          <Die value={1}/>
-          <Die value={2}/>
-          <Die value={3}/>
-          <Die value={4}/>
+          {diceComponents}
         </container>    
       </main>
     </>
