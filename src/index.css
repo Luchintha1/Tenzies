@@ -13,6 +13,11 @@ body {
     align-items: center;
 }
 
+button{
+    font-family: Karla, sans-serif;
+    cursor: pointer;
+}
+
 div#root{
     height: 100%;
     width: 100%;
@@ -46,6 +51,18 @@ main > .dice-container{
     background-color: white;
     font-size: 1.75rem;
     font-weight: 700;
-    cursor: pointer;
-    font-family: Karla, sans-serif;
+    
+}
+
+.roll-button{
+    margin-top: 100px;
+    background-color: #5035FF;
+    border: none;
+    box-shadow: 0px 3.2px 7.68px 0px #0000002E;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 12px 50px;
+
 }
